@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget{
 
 class _HomePageState extends State<HomePage>{
   var _fragmentIndex = 0;
+  final _listaCidadesKey = GlobalKey<CidadeFragmentState>();
 
   Widget build(BuildContext context){
     return Scaffold(
