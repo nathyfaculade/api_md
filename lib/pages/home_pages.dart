@@ -39,9 +39,20 @@ class _HomePageState extends State<HomePage>{
           }
         },
       ),
+      floatingActionButton: _buildFloatingButton(),
     );
   }
 
   Widget _buildBody() => _fragmentIndex == 0 ? CepFragment() : CidadeFragment();
+  Widget? _buildFloatingButton(){
+    if(_fragmentIndex == 0){
+      return null;
+    }
+    return FloatingActionButton(
+        onPressed: (){},
+      child: const Icon(Icons.add),
+      tooltip: 'Cdastrar nova Cidade',
+    );
+  }
 
 }
